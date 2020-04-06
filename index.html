@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Hello World</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+<body>
+    <div id="application-root"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        const Header = function () {
+            return (
+                <header>
+                <h1>Sally Student</h1>
+                <section className="contact-details">
+                <div className="contact">
+                <address>1234 Wallaby Lane</address>
+                <p>Phone #</p>
+                <p>myemail@email.com</p>
+                </div>
+                </section>
+                </header>
+            )
+          }
+
+        const MyBody = function () {
+              return (
+                  <main>
+                    <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="girl with curly hair crossing her arms" />
+                    <section className="resume-details">
+                        <div className="experience">
+                        <h3>Experience</h3>
+                        <h5>Job one</h5>
+                        <p>Some text about the job</p>
+                        <h5>Job two</h5>
+                        <p>Some text about the job</p>
+                        </div>
+                        <div className="education">
+                        <h3>Education</h3>
+                        <h5>Best University Ever</h5>
+                        <p>Computer Science, BS</p>
+                        </div>
+                    </section>
+                  </main>
+              )
+          }
+
+        
+          ReactDOM.render(
+            <div className="mainDiv">
+            <Header />
+            <MyBody />
+            </div>,
+          document.querySelector('#application-root')
+        )
+    </script>
+</body>
+</html>
